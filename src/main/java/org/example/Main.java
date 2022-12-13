@@ -6,6 +6,11 @@ public class Main {
 //        System.out.println();
 
         System.out.println("Всего високосных лет - " + greg(2023));
+//        int level = 11;
+        for (int i = -10; i <= 10; i++) {
+            System.out.println(i + " " + pow2(i));
+        }
+
 
     }
 
@@ -27,6 +32,14 @@ public class Main {
     // Новая Задача
     // Реализуйте метод, проверяющий, является ли заданное число по абсолютной величине степенью двойки.
     // ----------------------------
+
+    public static boolean pow2(int level) {
+        if (Integer.bitCount(Math.abs(level)) == 1) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
 //    В Григорианском календаре год является високосным в двух случаях: либо он кратен 4,
 //    но при этом не кратен 100, либо кратен 400.
